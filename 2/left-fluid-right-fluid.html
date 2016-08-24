@@ -1,0 +1,203 @@
+<html>
+  <head>
+    <title>Left Fluid - Right Fluid</title>
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        font-family: Helvetica;
+      }
+
+      .master-view {
+        background: #ffffff;
+        width: 100%;
+        box-shadow: 0 0 5px 1px #ccc;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .master-view-header {
+        text-align: left;
+        color: white;
+        padding: 20px;
+        margin: 0;
+        background: #4683ff;
+        border-bottom: 1px solid #eee;
+      }
+
+      .master-view-header h1 {
+        margin: 0;
+      }
+
+      .master-view-nav {
+        display: none;
+        padding: 0;
+        margin: 0;
+        text-align: left;
+        list-style: none;
+        color: white;
+        overflow-y: scroll;
+        overflow-x: none;
+      }
+
+      .master-view-nav a {
+        text-decoration: none;
+      }
+
+      .master-view-nav li {
+        padding: 20px 20px;
+        background: #ffffff;
+        color: #000000;
+        text-indent: none;
+      }
+
+      .master-view-nav li:hover:after,
+      .master-view-nav li.active:after {
+        content: '\2192';
+        color: #c0c0c0;
+        float: right;
+        margin-top: -2px
+      }
+
+      .master-view-nav li:hover {
+        background: #eeeeee;
+      }
+
+      .master-view-nav li.active,
+      .master-view-nav li.active:after {
+        background: #eeeeee;
+        color: #000000;
+      }
+
+      .detail-view {
+        flex: 5;
+        justify-items: center;
+        align-items: center;
+        background-color: #f9f9f9;
+        width: 100%;
+        height: 100%;
+      }
+
+      .detail-view h1 {
+        padding: 20px;
+        margin: 0;
+        border-bottom: 1px solid #ccc;
+        background: #ffffff;
+      }
+
+      .detail-view p {
+        padding: 20px;
+        margin: 0;
+      }
+
+      @media only screen and (min-width: 768px) {
+        body {
+          flex-direction: row;
+        }
+
+        .master-view {
+          height: 100%;
+          width: 25%;
+          float: left;
+          padding-bottom: 0;
+          z-index: 2;
+        }
+
+        .master-view-nav {
+          display: initial;
+        }
+
+        .detail-view {
+          z-index: 1;
+          width: 100%;
+          height: 100%;
+          overflow-x: none;
+          overflow-y: scroll;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <script>document.write('<script src="http://' + (location.host || '${1:localhost}').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+    <div class="master-view">
+    <div class="master-view-header">
+    <h1>Layouts</h1>
+    </div>
+      <ul class="master-view-nav">
+        <a href="natural-flow.html">
+          <li>Natural Flow</li>
+        </a>
+        <a href="left-fixed-right-fluid.html">
+          <li>Left Fixed Right Fluid</li>
+        </a>
+        <a href="left-fluid-right-fluid.html">
+          <li class="active">Left Fluid Right Fluid</li>
+        </a>
+        <a href="left-fluid-right-fixed.html">
+          <li>Left Fluid Right Fixed</li>
+        </a>
+        <a href="column-drop.html">
+          <li>Column Drop</li>
+        </a>
+      </ul>
+    </div>
+    <div class="detail-view">
+      <h1>Left Fluid - Right Fluid</h1>
+      <p>
+        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo odio pariatur magni error. Facilis, commodi iusto adipisci maxime totam nulla dolorum eaque, cupiditate est enim, blanditiis aliquid quidem quibusdam vero.</span>
+        <span>Illum delectus aliquam ratione modi vitae repellendus repudiandae sunt, in laborum deleniti autem ducimus, rem quibusdam, sit quasi necessitatibus quidem earum adipisci corporis ut temporibus? Aspernatur fuga consequatur ipsam repudiandae?</span>
+        <span>Aperiam aut, nobis minus modi! Modi reprehenderit, dicta ullam harum molestias minima, voluptate perferendis facilis saepe sunt veritatis, nisi a deleniti ea omnis numquam adipisci doloremque vel repellat recusandae cumque.</span>
+        <br>
+        <br>
+        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam aperiam, aliquam recusandae eveniet! Esse, dolores, vero! Magni harum, vitae. Molestiae, aliquam mollitia itaque sint, repellat corporis neque nihil eius dignissimos.</span>
+        <span>Fugit cum quod incidunt odio eveniet iste reiciendis, ab sint voluptatum eius, in, culpa nemo eligendi, doloribus atque nobis. Nostrum excepturi fuga quos ab optio aspernatur natus praesentium ducimus deserunt.</span>
+        <span>Similique sit et quaerat unde sunt iure impedit eum, labore fugiat at velit perspiciatis, animi blanditiis consequuntur deleniti voluptates repudiandae hic qui nobis officiis eius ipsam sequi nulla iste ea?</span>
+        <br>
+        <br>
+        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis veniam recusandae ea, magni quia itaque nihil minus fuga praesentium, aliquid vitae fugit libero amet doloremque error eaque eius rerum nostrum?</span>
+        <span>Illum sapiente reiciendis delectus rerum earum dolore provident alias! Dignissimos saepe dolorum amet illum pariatur voluptate eum, delectus ea, ut qui error ipsa nulla nihil non earum doloremque, quis illo.</span>
+        <span>Dignissimos quas iste soluta magnam laudantium, vel dicta nemo, officia, accusantium praesentium tempora sint iusto sit, odio. Pariatur dicta quod non tenetur, expedita a reiciendis molestiae nam mollitia, rem delectus!</span>
+        <br>
+        <br>
+        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est vero recusandae dolorem aut nihil iste vel ex minus ut, fuga iusto accusamus, eaque optio porro ullam corrupti maxime ea voluptatum.</span>
+        <span>Distinctio quis sapiente tenetur quia corrupti repudiandae, dignissimos iusto, excepturi delectus ullam esse inventore obcaecati magni eos recusandae! Atque adipisci esse saepe officia pariatur corporis in sit velit voluptates magnam!</span>
+        <span>Beatae illo tempora debitis quam voluptates facilis neque totam est, sint modi assumenda, repellat corporis dolor ad fugiat soluta! Nisi odit, laudantium voluptatum similique quaerat, harum deserunt tempora sunt cum!</span>
+        <br>
+        <br>
+        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem dignissimos eum earum itaque delectus facilis temporibus sint quam nesciunt nemo quidem blanditiis harum eveniet, sequi ducimus ad quae accusantium amet!</span>
+        <span>Neque cum ducimus, voluptatem provident, quo temporibus. Id accusamus veniam sunt non reiciendis nemo quae rerum nihil eius laudantium quibusdam voluptatibus ratione corporis laborum repellat quo animi, maiores, commodi. Aut!</span>
+        <span>Blanditiis laboriosam rem excepturi, molestiae magni, mollitia fugit aliquam beatae assumenda nisi. Esse labore maxime consequuntur, voluptate impedit voluptates nemo repudiandae soluta beatae, accusantium nulla quas, quis nesciunt ex deserunt.</span>
+        <br>
+        <br>
+        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, at facilis totam, sed fugit voluptates, quo similique veritatis provident odit laboriosam pariatur reprehenderit in dolorum dignissimos a maxime enim? Accusantium.</span>
+        <span>Aliquam dicta deserunt mollitia porro modi quis velit neque non. Sit explicabo, maiores molestias quae, adipisci voluptatum necessitatibus aliquam quia ab ad, ullam aspernatur quisquam porro eligendi, quidem et odio!</span>
+        <span>Aut consequuntur repudiandae voluptatum rerum et mollitia praesentium, distinctio facilis accusantium temporibus! Amet voluptate qui, expedita officia maxime et repellendus quo quisquam corporis tempore minus odit libero. Quae, quia, eveniet!</span>
+        <br>
+        <br>
+        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum deleniti, amet labore ipsum iste tempore distinctio, fugiat incidunt odit possimus quaerat sequi esse libero, maiores obcaecati sunt laboriosam aut! Dolorem!</span>
+        <span>Non omnis qui aperiam corrupti aspernatur, ab, ipsum vero, id fuga unde eveniet nihil! Rerum illo qui ipsa laborum asperiores, aspernatur quam libero! Soluta, adipisci, esse? In enim velit nemo!</span>
+        <span>Animi expedita, similique! Maxime consequuntur mollitia sequi deserunt similique dolor, quo accusamus. Hic debitis exercitationem, ullam iste illo pariatur ipsum est nemo excepturi quidem earum, mollitia ad commodi a quibusdam.</span>
+        <br>
+        <br>
+        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis fugiat expedita aliquid facere tempora iusto iure dicta dolorem totam alias consequatur quis repellendus, distinctio odio! Ad dolores minima laudantium non.</span>
+        <span>Placeat dolores tempora fugit soluta aliquid consectetur est omnis quia explicabo perspiciatis voluptates unde repudiandae odit necessitatibus distinctio enim laborum atque doloremque cumque, beatae voluptas. Rem iure aut quam delectus!</span>
+        <span>Natus quo excepturi, ipsa labore corporis obcaecati officiis a provident, sequi nihil deleniti ipsam consequatur iste eum unde sit animi molestias aliquam porro expedita repellat minima. Aliquid maiores quisquam possimus!</span>
+        <br>
+        <br>
+        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ducimus adipisci odio. Nihil tempora eos, modi nisi non magnam praesentium, itaque earum, nostrum possimus aspernatur fuga ex dolore eaque dicta.</span>
+        <span>Praesentium culpa tenetur sapiente, rerum. Ad inventore vitae maxime vero. Laudantium ad nesciunt rem cupiditate quidem illo impedit reprehenderit aspernatur mollitia, sequi facere minus suscipit beatae voluptatum nostrum iusto? Nisi.</span>
+        <span>Ipsa ea eligendi quaerat debitis sint numquam error, maiores dolores, officia, qui voluptatibus aspernatur deleniti quae? Debitis iure tempore enim rem autem minima, vitae explicabo perspiciatis in beatae doloremque expedita.</span>
+        <br>
+        <br>
+        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio dolor, consequuntur nesciunt architecto aliquam quibusdam dignissimos. Commodi quis, debitis ipsa quia et nobis voluptatum autem, harum in unde odio dolores.</span>
+        <span>Quibusdam dolor quo deleniti quasi, ratione, eaque dolore in nihil molestias, officia neque ad debitis praesentium porro doloribus. Praesentium eum blanditiis laboriosam vitae fugit quisquam autem fugiat numquam accusamus voluptatum?</span>
+        <span>Asperiores, esse nostrum, deleniti fugiat expedita eius consequatur quos? Sint nulla illum qui odio harum cum ducimus consectetur maiores? Sunt veniam minima officia quo aperiam. Eveniet voluptate, quo odit natus.</span>
+        <br>
+        <br>
+      </p>
+    </div>
+  </body>
+</html>
+
+

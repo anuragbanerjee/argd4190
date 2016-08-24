@@ -1,0 +1,190 @@
+<html>
+  <head>
+    <title>Natural Flow</title>
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        font-family: Helvetica;
+      }
+
+      .master-view {
+        background: #ffffff;
+        width: 100%;
+        box-shadow: 0 0 5px 1px #ccc;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .master-view-header {
+        text-align: left;
+        color: white;
+        padding: 20px;
+        margin: 0;
+        background: #4683ff;
+        border-bottom: 1px solid #eee;
+      }
+
+      .master-view-header h1 {
+        margin: 0;
+      }
+
+      .master-view-nav {
+        display: none;
+        padding: 0;
+        margin: 0;
+        text-align: left;
+        list-style: none;
+        color: white;
+        overflow-y: scroll;
+        overflow-x: none;
+      }
+
+      .master-view-nav a {
+        text-decoration: none;
+      }
+
+      .master-view-nav li {
+        padding: 20px 20px;
+        background: #ffffff;
+        color: #000000;
+        text-indent: none;
+      }
+      .master-view-nav li:hover:after,
+      .master-view-nav li.active:after {
+        content: '\2192';
+        color: #c0c0c0;
+        float: right;
+        margin-top: -2px
+      }
+
+      .master-view-nav li:hover {
+        background: #eeeeee;
+      }
+
+      .master-view-nav li.active,
+      .master-view-nav li.active:after {
+        background: #eeeeee;
+        color: #000000;
+      }
+
+      .detail-view {
+        flex: 5;
+        justify-items: center;
+        align-items: center;
+        background-color: #f9f9f9;
+        width: 100%;
+        height: 100%;
+      }
+
+      .detail-view h1 {
+        padding: 20px;
+        margin: 0;
+        border-bottom: 1px solid #ccc;
+        background: #ffffff;
+      }
+
+      .detail-view p {
+        padding: 20px;
+        margin: 0;
+      }
+
+      .box {
+        margin: 20px;
+        border: 1px solid #cccccc;
+        background: white;
+        padding: 20px;
+      }
+
+      @media only screen and (min-width: 768px) {
+        body {
+          flex-direction: row;
+        }
+
+        .master-view {
+          height: 100%;
+          width: 300px;
+          float: left;
+          padding-bottom: 0;
+          z-index: 2;
+        }
+
+        .master-view-nav {
+          display: initial;
+        }
+
+        .detail-view {
+          z-index: 1;
+          width: 100%;
+          height: 100%;
+          overflow-x: none;
+          overflow-y: scroll;
+        }
+
+        .box {
+          width: 200px;
+          height: 200px;
+          float: left;
+          margin: 20px;
+          border: 1px solid #cccccc;
+          background: white;
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <script>document.write('<script src="http://' + (location.host || '${1:localhost}').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+    <div class="master-view">
+    <div class="master-view-header">
+    <h1>Layouts</h1>
+    </div>
+      <ul class="master-view-nav">
+        <a href="natural-flow.html">
+          <li class="active">Natural Flow</li>
+        </a>
+        <a href="left-fixed-right-fluid.html">
+          <li>Left Fixed Right Fluid</li>
+        </a>
+        <a href="left-fluid-right-fluid.html">
+          <li>Left Fluid Right Fluid</li>
+        </a>
+        <a href="left-fluid-right-fixed.html">
+          <li>Left Fluid Right Fixed</li>
+        </a>
+        <a href="column-drop.html">
+          <li>Column Drop</li>
+        </a>
+      </ul>
+    </div>
+    <div class="detail-view">
+      <h1>Natural Flow</h1>
+      <div class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quisquam facere ducimus rem cumque, nobis eum voluptas dicta laudantium cum consequuntur explicabo id commodi laborum enim laboriosam soluta reprehenderit provident.</div>
+      <div class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quisquam facere ducimus rem cumque, nobis eum voluptas dicta laudantium cum consequuntur explicabo id commodi laborum enim laboriosam soluta reprehenderit provident.</div>
+      <div class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quisquam facere ducimus rem cumque, nobis eum voluptas dicta laudantium cum consequuntur explicabo id commodi laborum enim laboriosam soluta reprehenderit provident.</div>
+      <div class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quisquam facere ducimus rem cumque, nobis eum voluptas dicta laudantium cum consequuntur explicabo id commodi laborum enim laboriosam soluta reprehenderit provident.</div>
+      <div class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quisquam facere ducimus rem cumque, nobis eum voluptas dicta laudantium cum consequuntur explicabo id commodi laborum enim laboriosam soluta reprehenderit provident.</div>
+      <div class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quisquam facere ducimus rem cumque, nobis eum voluptas dicta laudantium cum consequuntur explicabo id commodi laborum enim laboriosam soluta reprehenderit provident.</div>
+      <div class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quisquam facere ducimus rem cumque, nobis eum voluptas dicta laudantium cum consequuntur explicabo id commodi laborum enim laboriosam soluta reprehenderit provident.</div>
+      <div class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quisquam facere ducimus rem cumque, nobis eum voluptas dicta laudantium cum consequuntur explicabo id commodi laborum enim laboriosam soluta reprehenderit provident.</div>
+      <div class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quisquam facere ducimus rem cumque, nobis eum voluptas dicta laudantium cum consequuntur explicabo id commodi laborum enim laboriosam soluta reprehenderit provident.</div>
+      <div class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quisquam facere ducimus rem cumque, nobis eum voluptas dicta laudantium cum consequuntur explicabo id commodi laborum enim laboriosam soluta reprehenderit provident.</div>
+      <div class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quisquam facere ducimus rem cumque, nobis eum voluptas dicta laudantium cum consequuntur explicabo id commodi laborum enim laboriosam soluta reprehenderit provident.</div>
+      <div class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quisquam facere ducimus rem cumque, nobis eum voluptas dicta laudantium cum consequuntur explicabo id commodi laborum enim laboriosam soluta reprehenderit provident.</div>
+      <div class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quisquam facere ducimus rem cumque, nobis eum voluptas dicta laudantium cum consequuntur explicabo id commodi laborum enim laboriosam soluta reprehenderit provident.</div>
+      <div class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quisquam facere ducimus rem cumque, nobis eum voluptas dicta laudantium cum consequuntur explicabo id commodi laborum enim laboriosam soluta reprehenderit provident.</div>
+      <div class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quisquam facere ducimus rem cumque, nobis eum voluptas dicta laudantium cum consequuntur explicabo id commodi laborum enim laboriosam soluta reprehenderit provident.</div>
+      <div class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quisquam facere ducimus rem cumque, nobis eum voluptas dicta laudantium cum consequuntur explicabo id commodi laborum enim laboriosam soluta reprehenderit provident.</div>
+      <div class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quisquam facere ducimus rem cumque, nobis eum voluptas dicta laudantium cum consequuntur explicabo id commodi laborum enim laboriosam soluta reprehenderit provident.</div>
+      <div class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quisquam facere ducimus rem cumque, nobis eum voluptas dicta laudantium cum consequuntur explicabo id commodi laborum enim laboriosam soluta reprehenderit provident.</div>
+      <div class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quisquam facere ducimus rem cumque, nobis eum voluptas dicta laudantium cum consequuntur explicabo id commodi laborum enim laboriosam soluta reprehenderit provident.</div>
+      <div class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quisquam facere ducimus rem cumque, nobis eum voluptas dicta laudantium cum consequuntur explicabo id commodi laborum enim laboriosam soluta reprehenderit provident.</div>
+    </div>
+  </body>
+</html>
+
+
